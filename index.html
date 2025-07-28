@@ -13,27 +13,151 @@
         rel="stylesheet">
     <meta charset="utf-8">
     <style>
-        .wavy-underline {
+        .underline {
             text-decoration: underline;
-            text-decoration-style: wavy;
-            text-decoration-color: #f1c432;
+            text-decoration-color: #666;
         }
 
+        /* 简洁学术风格 */
+        body {
+            background: #ffffff;
+            font-family: 'Google Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* 主标题样式 */
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /* 简洁容器样式 */
+        .card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            padding: 30px;
+            margin: 30px 0;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        /* Abstract 部分样式 - 增大字体，内容左对齐 */
+        .abstract {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #333;
+            text-align: justify;
+            margin: 20px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 研究论文图片容器 */
+        .paper-container {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .paper-container h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .paper-container img {
+            width: 85%;
+            max-width: 700px;
+            border: 1px solid #ddd;
+        }
+
+        /* 音频对比区域标题 */
+        .comparison-title {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .comparison-subtitle {
+            font-size: 1rem;
+            color: #666;
+            font-weight: normal;
+        }
+
+        /* 简洁表格样式 */
         table.table {
             margin: 20px auto;
             border-collapse: collapse;
+            background: white;
+            border: 1px solid #ddd;
+            width: 100%;
         }
 
         table.table th {
-            background-color: #f8f9fa;
+            background: #f8f9fa;
+            color: #333;
             padding: 15px;
-            border: 1px solid #dee2e6;
-            font-weight: bold;
+            border: 1px solid #ddd;
+            font-weight: 600;
+            font-size: 16px;
         }
 
         table.table td {
             padding: 15px;
-            border: 1px solid #dee2e6;
+            border: 1px solid #ddd;
+            background: #ffffff;
+        }
+
+        table.table tr:hover td {
+            background: #f8f9fa;
+        }
+
+        /* 音频控件样式 */
+        audio {
+            border: 1px solid #ddd;
+        }
+
+        /* 标题样式统一 */
+        h1,
+        h2,
+        h3 {
+            color: #333;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #666;
+            padding-bottom: 10px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .abstract {
+                font-size: 16px;
+            }
+
+            .comparison-title {
+                font-size: 1.2rem;
+            }
         }
 
         .reserved-cell {
@@ -51,10 +175,10 @@
 </head>
 
 <body>
-    <div class="header" id="top">
+    <div class="header card" id="top">
         <h1>
             <span style="font-weight: bolder; color: #c03d3e;">Psychoacoustics</span>
-            <span style="font-weight: bolder; color: #f1c432;">Robustness</span>
+            <span style="font-weight: bolder; color: #666;">Robustness</span>
             <span style="font-weight: bolder; color: #0b0b0b;">:</span>
             <span style="font-weight: normal; color: #0b0b0b;">Exploring Audio Processing Robustness</span>
         </h1>
@@ -62,10 +186,10 @@
         <table class="authors">
             <tbody>
                 <tr>
-                    <td>
+                    <td style="text-align: center;">
                         <h3>
                             <span class="author-block">
-                                <a href="#" style="color: #0b0b0b">Research Project, 2024</a>
+                                <a href="#" style="color: #0b0b0b">Research Project, 2025</a>
                             </span>
                         </h3>
                     </td>
@@ -74,29 +198,38 @@
         </table>
 
         <br>
-        <br>
 
         <div>
-            <h2 style="color: #f1c432;">Abstract</h2>
+            <h2>Abstract</h2>
         </div>
 
         <p class="abstract">
-            This project investigates the robustness of psychoacoustic models against adversarial attacks.
-            We explore how different attack methods can manipulate audio signals while maintaining perceptual
-            similarity,
-            challenging the robustness of human auditory perception and automated audio processing systems.
-            Our research focuses on understanding the vulnerabilities in psychoacoustic models and developing
-            effective countermeasures against these sophisticated audio attacks.
+            Intelligent speech systems have been widely applied in various scenarios, but their core - speech
+            understanding algorithms - can be misled by carefully constructed "small" noise to produce erroneous
+            decisions, namely adversarial sample attacks. It can be proven that defense aims to provide a lower bound on
+            accuracy for deep learning algorithms under a certain perturbation constraint. However, existing work has
+            only established the relationship between model robustness and perturbation norms, and there is a mismatch
+            between perturbation norms and human auditory perception. Attackers can find ways to hide adversarial
+            perturbations outside of human senses. We propose a novel provable defense framework for speech
+            understanding algorithms - the psychoacoustic oriented random smoothing framework. This paper verifies
+            through rigorous mathematical proofs and extensive experiments that our framework can provide guarantees for
+            the lower bound of model accuracy under specific audible constraints. The experiment verified that within
+            the range of human auditory perception, the accuracy of the model under attack increased from 3.2% to no
+            less than 69.3%. This article bridges the gap between provable defense and human auditory perception,
+            establishing the relationship between model robustness and noise listenability.
         </p>
 
-        <!-- 图片展示区域 -->
-        <div style="display: flex; justify-content: center; margin: 40px 0;">
-            <img src="images/overall.png" alt="Project Overview" style="width: 60%; max-width: 800px;">
+        <!-- 研究论文图片显示 -->
+        <div class="paper-container">
+            <h3>Research Paper</h3>
+            <div style="display: flex; justify-content: center;">
+                <img src="images/research_paper_page_1.png" alt="Research Paper">
+            </div>
         </div>
     </div>
 
-    <div>
-        <h2 style="color: #f1c432;">Audio Processing Method Comparisons</h2>
+    <div class="card">
+        <h2>Audio Processing Method Comparisons</h2>
         <p class="abstract">
             The following audio samples demonstrate different audio processing methods and their effects on sound
             quality.
@@ -107,10 +240,11 @@
     </div>
 
     <!-- 音频攻击对比区域 1 -->
-    <div class="figure-caption" style="margin-top: auto;">
-        <div class="content" style="margin-top: 50px;">
-            <h3 style="font-weight: bold; color: #ECAEA7; text-align: center;">
-                <span class="wavy-underline">Attack Comparison Set 1</span>: Audio Processing Robustness
+    <div class="card">
+        <div class="content">
+            <h3 class="comparison-title">
+                <span class="underline">Audio Comparison Set 1</span>
+                <span class="comparison-subtitle">: Processing Method Comparison</span>
             </h3>
             <table class="table table-hover pt-2">
                 <thead>
@@ -150,10 +284,11 @@
     </div>
 
     <!-- 音频攻击对比区域 2 -->
-    <div class="figure-caption" style="margin-top: auto;">
-        <div class="content" style="margin-top: 50px;">
-            <h3 style="font-weight: bold; color: #ECAEA7; text-align: center;">
-                <span class="wavy-underline">Attack Comparison Set 2</span>: Different Audio Samples
+    <div class="card">
+        <div class="content">
+            <h3 class="comparison-title">
+                <span class="underline">Audio Comparison Set 2</span>
+                <span class="comparison-subtitle">: Processing Method Comparison</span>
             </h3>
             <table class="table table-hover pt-2">
                 <thead>
@@ -193,10 +328,11 @@
     </div>
 
     <!-- 音频攻击对比区域 3 -->
-    <div class="figure-caption" style="margin-top: auto;">
-        <div class="content" style="margin-top: 50px;">
-            <h3 style="font-weight: bold; color: #ECAEA7; text-align: center;">
-                <span class="wavy-underline">Attack Comparison Set 3</span>: Additional Test Samples
+    <div class="card">
+        <div class="content">
+            <h3 class="comparison-title">
+                <span class="underline">Audio Comparison Set 3</span>
+                <span class="comparison-subtitle">: Processing Method Comparison</span>
             </h3>
             <table class="table table-hover pt-2">
                 <thead>
@@ -236,10 +372,11 @@
     </div>
 
     <!-- 音频攻击对比区域 4 -->
-    <div class="figure-caption" style="margin-top: auto;">
-        <div class="content" style="margin-top: 50px;">
-            <h3 style="font-weight: bold; color: #ECAEA7; text-align: center;">
-                <span class="wavy-underline">Attack Comparison Set 4</span>: Final Test Sample
+    <div class="card">
+        <div class="content">
+            <h3 class="comparison-title">
+                <span class="underline">Audio Comparison Set 4</span>
+                <span class="comparison-subtitle">: Processing Method Comparison</span>
             </h3>
             <table class="table table-hover pt-2">
                 <thead>
@@ -279,40 +416,20 @@
     </div>
 
     <!-- 实验结果展示区域 -->
-    <div>
-        <h2 style="color: #f1c432;">Processing Method Analysis</h2>
+    <div class="card">
+        <h2>Processing Method Analysis</h2>
         <p class="abstract">
             Our analysis demonstrates the effectiveness of different audio processing methods on audio quality
             enhancement.
             The results show how ASI-Certification and PsychoacousticsRobustness methods can improve audio processing
             while maintaining high-quality sound output across different sample types.
         </p>
-
-        <!-- 图片展示区域 -->
-        <div style="display: flex; justify-content: center; margin: 40px 0;">
-            <img src="images/ASVSpoof-results.png" alt="Attack Analysis Results" style="width: 80%; max-width: 900px;">
-        </div>
-
-        <p class="abstract" style="margin-top: 20px;">
-            The visualization above shows the comparative analysis of processing success rates across different audio
-            samples and methodologies. The current implementation includes ASI-Certification and
-            PsychoacousticsRobustness
-            methods, demonstrating their effectiveness in audio quality enhancement and processing optimization.
-        </p>
-    </div>
-
-    <!-- 致谢部分 -->
-    <div style="margin-top: 60px; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
-        <h3 style="color: #666; text-align: center;">Acknowledgments</h3>
-        <p style="text-align: center; color: #666; font-style: italic;">
-            This website template is adapted from the SafeEar project. We thank the original authors for providing an
-            excellent foundation for academic project presentation.
-        </p>
     </div>
 
     <!-- 页脚 -->
-    <footer style="background-color: #efeff3; width: 100%; margin-top: 32px; padding: 16px; text-align: center;">
-        <p style="color: #666; margin: 0;">PsychoacousticsRobustness Project © 2024</p>
+    <footer
+        style="background-color: #f8f9fa; width: 100%; margin-top: 32px; padding: 16px; text-align: center; border-top: 1px solid #dee2e6;">
+        <p style="color: #666; margin: 0;">PsychoacousticsRobustness Project © 2025</p>
     </footer>
 
 </body>
