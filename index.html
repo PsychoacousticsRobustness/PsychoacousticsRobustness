@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>PsychoacousticsRobustness</title>
+    <meta property="og:title" content="PsychoacousticsRobustness">
+    <meta property="og:description" content="Exploring Psychoacoustic Robustness Against Adversarial Attacks">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/SafeEar_logo.jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <meta charset="utf-8">
+    <style>
+        .wavy-underline {
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: #f1c432;
+        }
+
+        table.table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        table.table th {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border: 1px solid #dee2e6;
+            font-weight: bold;
+        }
+
+        table.table td {
+            padding: 15px;
+            border: 1px solid #dee2e6;
+        }
+
+        .reserved-cell {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6 !important;
+        }
+
+        .attack-label {
+            font-size: 12px;
+            margin-top: 5px;
+            color: #666;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header" id="top">
+        <h1>
+            <span style="font-weight: bolder; color: #c03d3e;">Psychoacoustics</span>
+            <span style="font-weight: bolder; color: #f1c432;">Robustness</span>
+            <span style="font-weight: bolder; color: #0b0b0b;">:</span>
+            <span style="font-weight: normal; color: #0b0b0b;">Exploring Audio Processing Robustness</span>
+        </h1>
+
+        <table class="authors">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>
+                            <span class="author-block">
+                                <a href="#" style="color: #0b0b0b">Research Project, 2024</a>
+                            </span>
+                        </h3>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <br>
+
+        <div>
+            <h2 style="color: #f1c432;">Abstract</h2>
+        </div>
+
+        <p class="abstract">
+            This project investigates the robustness of psychoacoustic models against adversarial attacks.
+            We explore how different attack methods can manipulate audio signals while maintaining perceptual
+            similarity,
+            challenging the robustness of human auditory perception and automated audio processing systems.
+            Our research focuses on understanding the vulnerabilities in psychoacoustic models and developing
+            effective countermeasures against these sophisticated audio attacks.
+        </p>
+
+        <!-- 图片展示区域 -->
+        <div style="display: flex; justify-content: center; margin: 40px 0;">
+            <img src="images/overall.png" alt="Project Overview" style="width: 60%; max-width: 800px;">
+        </div>
+    </div>
+
+    <div>
+        <h2 style="color: #f1c432;">Audio Processing Method Comparisons</h2>
+        <p class="abstract">
+            The following audio samples demonstrate different audio processing methods and their effects on sound
+            quality.
+            We compare original audio signals with ASI-Certification processed versions and PsychoacousticsRobustness
+            enhanced versions
+            to showcase the different approaches to audio processing and enhancement.
+        </p>
+    </div>
+
+    <!-- 音频攻击对比区域 1 -->
+    <div class="figure-caption" style="margin-top: auto;">
+        <div class="content" style="margin-top: 50px;">
+            <h3 style="font-weight: bold; color: #ECAEA7; text-align: center;">
+                <span class="wavy-underline">Attack Comparison Set 1</span>: Audio Processing Robustness
+            </h3>
+            <table class="table table-hover pt-2">
+                <thead>
+                    <tr>
+                        <th style="text-align: center">Original Audio</th>
+                        <th style="text-align: center">ASI-Certification</th>
+                        <th style="text-align: center">PsychoacousticsRobustness</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
+                            <audio controls="controls" style="width: 140px;">
+                                <source src="audio_samples/original/sample_01.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div style="font-size: 12px; margin-top: 5px; color: #666;">Sample 1</div>
+                        </td>
+                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
+                            <audio controls="controls" style="width: 140px;">
+                                <source src="audio_samples/asi-certification/sample_01_asi.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div style="font-size: 12px; margin-top: 5px; color: #666;">ASI Certified</div>
+                        </td>
+                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
+                            <audio controls="controls" style="width: 140px;">
+                                <source src="audio_samples/PsychoacousticsRobustness/sample_01_pr.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div style="font-size: 12px; margin-top: 5px; color: #666;">PR Enhanced</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 音频攻击对比区域 2 -->
+    <div class="figure-caption" style="margin-top: auto;">
+        <div class="content" style="margin-top: 50px;">
+            <h3 style="font-weight: bold; color: #ECAEA7; text-align: center;">
+                <span class="wavy-underline">Attack Comparison Set 2</span>: Different Audio Samples
+            </h3>
+            <table class="table table-hover pt-2">
+                <thead>
+                    <tr>
+                        <th style="text-align: center">Original Audio</th>
+                        <th style="text-align: center">ASI-Certification</th>
+                        <th style="text-align: center">PsychoacousticsRobustness</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
+                            <audio controls="controls" style="width: 140px;">
+                                <source src="audio_samples/original/sample_02.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div style="font-size: 12px; margin-top: 5px; color: #666;">Sample 2</div>
+                        </td>
+                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
+                            <audio controls="controls" style="width: 140px;">
+                                <source src="audio_samples/asi-certification/sample_02_asi.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div style="font-size: 12px; margin-top: 5px; color: #666;">ASI Certified</div>
+                        </td>
+                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
+                            <audio controls="controls" style="width: 140px;">
+                                <source src="audio_samples/PsychoacousticsRobustness/sample_02_pr.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div style="font-size: 12px; margin-top: 5px; color: #666;">PR Enhanced</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 音频攻击对比区域 3 -->
+    <div class="figure-caption" style="margin-top: auto;">
+        <div class="content" style="margin-top: 50px;">
+            <h3 style="font-weight: bold; color: #ECAEA7; text-align: center;">
+                <span class="wavy-underline">Attack Comparison Set 3</span>: Additional Test Samples
+            </h3>
+            <table class="table table-hover pt-2">
+                <thead>
+                    <tr>
+                        <th style="text-align: center">Original Audio</th>
+                        <th style="text-align: center">ASI-Certification</th>
+                        <th style="text-align: center">PsychoacousticsRobustness</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
+                            <audio controls="controls" style="width: 140px;">
+                                <source src="audio_samples/original/sample_03.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div style="font-size: 12px; margin-top: 5px; color: #666;">Sample 3</div>
+                        </td>
+                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
+                            <audio controls="controls" style="width: 140px;">
+                                <source src="audio_samples/asi-certification/sample_03_asi.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div style="font-size: 12px; margin-top: 5px; color: #666;">ASI Certified</div>
+                        </td>
+                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
+                            <audio controls="controls" style="width: 140px;">
+                                <source src="audio_samples/PsychoacousticsRobustness/sample_03_pr.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div style="font-size: 12px; margin-top: 5px; color: #666;">PR Enhanced</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 音频攻击对比区域 4 -->
+    <div class="figure-caption" style="margin-top: auto;">
+        <div class="content" style="margin-top: 50px;">
+            <h3 style="font-weight: bold; color: #ECAEA7; text-align: center;">
+                <span class="wavy-underline">Attack Comparison Set 4</span>: Final Test Sample
+            </h3>
+            <table class="table table-hover pt-2">
+                <thead>
+                    <tr>
+                        <th style="text-align: center">Original Audio</th>
+                        <th style="text-align: center">ASI-Certification</th>
+                        <th style="text-align: center">PsychoacousticsRobustness</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
+                            <audio controls="controls" style="width: 140px;">
+                                <source src="audio_samples/original/sample_04.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div style="font-size: 12px; margin-top: 5px; color: #666;">Sample 4</div>
+                        </td>
+                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
+                            <audio controls="controls" style="width: 140px;">
+                                <source src="audio_samples/asi-certification/sample_04_asi.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div style="font-size: 12px; margin-top: 5px; color: #666;">ASI Certified</div>
+                        </td>
+                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
+                            <audio controls="controls" style="width: 140px;">
+                                <source src="audio_samples/PsychoacousticsRobustness/sample_04_pr.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div style="font-size: 12px; margin-top: 5px; color: #666;">PR Enhanced</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 实验结果展示区域 -->
+    <div>
+        <h2 style="color: #f1c432;">Processing Method Analysis</h2>
+        <p class="abstract">
+            Our analysis demonstrates the effectiveness of different audio processing methods on audio quality
+            enhancement.
+            The results show how ASI-Certification and PsychoacousticsRobustness methods can improve audio processing
+            while maintaining high-quality sound output across different sample types.
+        </p>
+
+        <!-- 图片展示区域 -->
+        <div style="display: flex; justify-content: center; margin: 40px 0;">
+            <img src="images/ASVSpoof-results.png" alt="Attack Analysis Results" style="width: 80%; max-width: 900px;">
+        </div>
+
+        <p class="abstract" style="margin-top: 20px;">
+            The visualization above shows the comparative analysis of processing success rates across different audio
+            samples and methodologies. The current implementation includes ASI-Certification and
+            PsychoacousticsRobustness
+            methods, demonstrating their effectiveness in audio quality enhancement and processing optimization.
+        </p>
+    </div>
+
+    <!-- 致谢部分 -->
+    <div style="margin-top: 60px; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+        <h3 style="color: #666; text-align: center;">Acknowledgments</h3>
+        <p style="text-align: center; color: #666; font-style: italic;">
+            This website template is adapted from the SafeEar project. We thank the original authors for providing an
+            excellent foundation for academic project presentation.
+        </p>
+    </div>
+
+    <!-- 页脚 -->
+    <footer style="background-color: #efeff3; width: 100%; margin-top: 32px; padding: 16px; text-align: center;">
+        <p style="color: #666; margin: 0;">PsychoacousticsRobustness Project © 2024</p>
+    </footer>
+
+</body>
+
+</html>
