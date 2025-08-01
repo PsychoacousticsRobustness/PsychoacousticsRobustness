@@ -1,0 +1,54 @@
+
+
+1. 摘要  Abstract
+2. 流程图  Our Pipeline
+3. compare to undefended model
+
+Figure \ref{fig:undefended_ASV_EN} presents the results on the speaker verification task using English language datasets.  Specifically, models are trained on VoxCeleb1 and VoxCeleb2, and evaluated on the LibriSpeech \textit{test-clean} set, which is entirely disjoint from the training data. At a perceptual noise threshold of $R = 0.032$, the attacker achieves only 3.2\% accuracy against the undefended model, demonstrating the effectivenessof the targeted attack. In contrast, thanks to the spectrum smoothing effect of \sys, the certified accuracy under the same perceptual constraint improves significantly to 61.6\% ($\sigma=10$), 68.7\% ($\sigma=20$), 69.3\% ($\sigma=30$), 61.6\% ($\sigma=40$), and 59.5\% ($\sigma=50$). The results indicate that no matter how sophisticated the attack strategy is, an adversary cannot reduce the model’s accuracy below these bounds. This demonstrates that \sys yields significantly more robust speaker verification models.
+
+(X1) 超参数
+
+(X2)
+
+(X3)
+
+4. compare to baseline （asi）
+
+|clean audio| asi audio|our audio|
+
+
+
+
+
+In total, we collected 2,500 responses. Among them, 2,420 responses (96.8\%) indicated that the adversarial samples targeting \sys were more perceptually noisy. Furthermore, when aggregating on a per-user basis, all 50 users judged that the noise in attacks against \sys was more apparent than that in attacks against the baseline. This highlights \sys's key advantage—offering certified robustness without compromising perceptual imperceptibility. In other words, adversaries must inject more audible noise to bypass our defense, making such attacks more detectable and less stealthy in real-world scenarios.
+
+
+
+5. noise audibility
+
+公式 audibility
+
+```latex
+\begin{equation}\label{def:audibility}
+\begin{aligned}
+\mathcal{A}(\delta, x) = \sum_{m=0}^{N_F-1}\mathcal{A}_m(\delta, x), \mathcal{A}_m(\delta, x)= \sum_{k=0}^{\lfloor\frac{N}{2}\rfloor}\Big(\frac{\overline{p}_\delta[m,k]}{\Omega_x[m,k]}\Big)
+\end{aligned}
+\end{equation}
+```
+
+评估audibility的效果，通过user-study
+
+user-study 问卷的training-part
+
+|1 clean audio|adversial audio|
+
+...
+
+|5 clean audio|adversial audio|
+
+
+
+---
+
+()"The first audio has noise", 1, False, False), ("The second audio has noise.", 0, False, False), ("Two audios are the same", 2, False, False)])
+

@@ -6,8 +6,11 @@
     <title>PsychoacousticsRobustness</title>
     <meta property="og:title" content="PsychoacousticsRobustness">
     <meta property="og:description" content="Exploring Psychoacoustic Robustness Against Adversarial Attacks">
+    <!-- 网站图标 -->
+    <link rel="icon" type="image/png" href="images/6de6d968-403f-439f-91c4-460d2bee411d.png">
+    <link rel="shortcut icon" type="image/png" href="images/6de6d968-403f-439f-91c4-460d2bee411d.png">
+    <link rel="apple-touch-icon" href="images/6de6d968-403f-439f-91c4-460d2bee411d.png">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="images/SafeEar_logo.jpg">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;700&display=swap"
         rel="stylesheet">
@@ -22,15 +25,15 @@
         body {
             background: #ffffff;
             font-family: 'Google Sans', sans-serif;
-            font-size: 16px;
+            font-size: 20px;
             line-height: 1.6;
             color: #333;
         }
 
         /* 主标题样式 */
         .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
             font-weight: 700;
             text-align: center;
         }
@@ -38,84 +41,91 @@
         /* 简洁容器样式 */
         .card {
             background: #ffffff;
-            border: 1px solid #ddd;
-            padding: 30px;
-            margin: 30px 0;
+            padding: 40px 20px;
+            margin: 30px auto;
             max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
             text-align: center;
+        }
+
+        /* 音频对比卡片更紧凑 */
+        .audio-comparison-card {
+            padding: 4px;
+            margin: 2px auto;
         }
 
         /* Abstract 部分样式 - 增大字体，内容左对齐 */
         .abstract {
-            font-size: 18px;
+            font-size: 22px;
             line-height: 1.7;
             color: #333;
             text-align: justify;
-            margin: 20px 0;
-            max-width: 800px;
+            margin: 10px 0;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
 
         /* 研究论文图片容器 */
         .paper-container {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            padding: 25px;
-            margin: 30px 0;
+            background: transparent;
+            padding: 30px 0;
+            margin: 30px auto;
             text-align: center;
+            max-width: 1200px;
         }
 
         .paper-container h3 {
             color: #333;
-            font-size: 1.5rem;
+            font-size: 1.9rem;
             margin-bottom: 20px;
             font-weight: 600;
         }
 
         .paper-container img {
-            width: 85%;
-            max-width: 700px;
-            border: 1px solid #ddd;
+            width: 95%;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         /* 音频对比区域标题 */
         .comparison-title {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 8px;
             text-align: center;
             font-weight: 600;
         }
 
         .comparison-subtitle {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #666;
             font-weight: normal;
         }
 
         /* 简洁表格样式 */
         table.table {
-            margin: 20px auto;
+            margin: 30px auto;
             border-collapse: collapse;
             background: white;
             border: 1px solid #ddd;
             width: 100%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         table.table th {
             background: #f8f9fa;
             color: #333;
-            padding: 15px;
+            padding: 15px 10px;
             border: 1px solid #ddd;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 17px;
         }
 
         table.table td {
-            padding: 15px;
+            padding: 18px 10px;
             border: 1px solid #ddd;
             background: #ffffff;
         }
@@ -124,9 +134,11 @@
             background: #f8f9fa;
         }
 
-        /* 音频控件样式 */
+        /* 音频控件样式 - 保留所有控制功能 */
         audio {
             border: 1px solid #ddd;
+            width: 180px;
+            height: 30px;
         }
 
         /* 标题样式统一 */
@@ -139,10 +151,18 @@
         }
 
         h2 {
-            font-size: 1.8rem;
+            font-size: 2.3rem;
             margin-bottom: 20px;
             border-bottom: 2px solid #666;
             padding-bottom: 10px;
+        }
+
+        /* Interactive Training表格样式 */
+        .paper-container .table {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
         }
 
         /* 响应式设计 */
@@ -152,7 +172,7 @@
             }
 
             .abstract {
-                font-size: 16px;
+                font-size: 17px;
             }
 
             .comparison-title {
@@ -176,11 +196,11 @@
         .user-study-form {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 10px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 12px;
         }
 
         .form-group label {
@@ -256,7 +276,7 @@
             height: 6px;
             background: #e9ecef;
             border-radius: 3px;
-            margin: 20px 0;
+            margin: 8px 0;
             overflow: hidden;
         }
 
@@ -286,12 +306,12 @@
 
         .stage-indicator {
             text-align: center;
-            margin: 20px 0;
-            font-size: 1.1rem;
+            margin: 8px 0;
+            font-size: 1rem;
             font-weight: 600;
             color: #007bff;
             background: #e7f3ff;
-            padding: 10px;
+            padding: 6px;
             border-radius: 5px;
         }
 
@@ -355,22 +375,77 @@
         </div>
 
         <p class="abstract">
-            Intelligent speech systems have been widely applied in various scenarios, but their core - speech
-            understanding algorithms - can be misled by carefully constructed "small" noise to produce erroneous
-            decisions, namely adversarial sample attacks. It can be proven that defense aims to provide a lower bound on
-            accuracy for deep learning algorithms under a certain perturbation constraint. However, existing work has
-            only established the relationship between model robustness and perturbation norms, and there is a mismatch
-            between perturbation norms and human auditory perception. Attackers can find ways to hide adversarial
-            perturbations outside of human senses. We propose a novel provable defense framework for speech
-            understanding algorithms - the psychoacoustic oriented random smoothing framework. This paper verifies
-            through rigorous mathematical proofs and extensive experiments that our framework can provide guarantees for
-            the lower bound of model accuracy under specific audible constraints. The experiment verified that within
-            the range of human auditory perception, the accuracy of the model under attack increased from 3.2% to no
-            less than 69.3%. This article bridges the gap between provable defense and human auditory perception,
-            establishing the relationship between model robustness and noise listenability.
+            Intelligent audio systems have been widely applied in various scenarios. However, their core component, the
+            speech understanding algorithm, can be misled by carefully constructed adversarial examples, which are
+            imperceptible to humans but can cause the system to make incorrect or even harmful decisions. Certified
+            defense aims to provide a lower bound on accuracy for deep learning algorithms under a certain perturbation
+            constraint. Nevertheless, existing work primarily focuses on bounding adversarial perturbations under ℓp
+            norm, which fail to accurately reflect human auditory perception. This mismatch allows adversaries to craft
+            imperceptible perturbations that bypass both human detection and norm-based defenses. We propose PORSCHE, a
+            novel certified defense framework for audio understanding algorithms, based on psychoacoustically guided
+            randomized smoothing. We present rigorous theoretical analysis and extensive experiments showing that
+            PORSCHE provides certified lower bounds on model accuracy under human perceptual constraints. In the
+            presence of imperceptible adversarial perturbations, PORSCHE raises the certified accuracy from 3.2% to at
+            least 69.3%. This paper bridges the gap between certified defense and human auditory perception,
+            establishing the relationship between model robustness and noise audibility. Our demo is available at
+            https://psychoacousticsrobustness.github.io/PsychoacousticsRobustness/
         </p>
 
         <!-- 研究论文图片显示 -->
+        <div class="paper-container">
+            <h3>Experimental Results</h3>
+            <div style="display: flex; justify-content: center;">
+                <div
+                    style="padding: 60px; background: #f8f9fa; border: 2px dashed #dee2e6; font-style: italic; color: #666; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    PORSCHE vs Undefended Model Results Chart
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Pipeline Section -->
+    <div class="card">
+        <h2>Our Pipeline</h2>
+        <p class="abstract">
+            PORSCHE (psychoacoustic-oriented random smoothing framework) provides a novel approach to defending against
+            adversarial attacks in speech understanding systems. The pipeline incorporates perceptual constraints to
+            ensure robustness while maintaining audio quality within human auditory perception limits.
+        </p>
+        <p class="abstract">
+            The workflow of PORSCHE: PORSCHE turns an audio understanding model into a spectral-smoothed one such that
+            the robustness of the model can be certified. It first transforms the input audio into spectrogram via STFT.
+            Then the thresholds in the context of the input audio are calculated. These thresholds determine an
+            anisotropic Gaussian distribution, from which we sample multiple spectral noises and add to the original
+            spectrogram. These noisy spectrograms are transformed back into audios, which are fed into the understanding
+            model to generate multiple classification results. A final label and a certified radius can be calculated
+            from the results.
+        </p>
+        <div class="paper-container">
+            <h3>Pipeline Overview</h3>
+            <div style="display: flex; justify-content: center;">
+                <img src="images/workflow_0730-1.png" alt="PORSCHE Pipeline Workflow"
+                    style="width: 95%; max-width: 900px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+    </div>
+
+    <!-- Experimental Results Section -->
+    <div class="card">
+        <h2>Compare to Undefended Model</h2>
+        <p class="abstract">
+            Approximate certified accuracy of PORSCHE on the LibriSpeech test-clean set for the ASV task. The
+            hyperparameter σ controls a robustness/accuracy tradeoff. The dashed black line is an upper bound on the
+            empirical robust accuracy of an undefended classifier with the base classifier's architecture. We observe
+            that smoothing significantly enhances the robustness compared to the undefended baseline.
+        </p>
+        <p class="abstract">
+            Specifically, models are trained on VoxCeleb1 and VoxCeleb2, and evaluated on the LibriSpeech test-clean
+            set, which is entirely disjoint from the training data. At a perceptual noise threshold of R = 0.032,
+            the attacker achieves only 3.2% accuracy against the undefended model, demonstrating the effectiveness
+            of the targeted attack. In contrast, thanks to the spectrum smoothing effect of PORSCHE,
+            the certified accuracy under the same perceptual constraint improves significantly to 61.6% (σ=10),
+            68.7% (σ=20), 69.3% (σ=30), 61.6% (σ=40), and 59.5% (σ=50).
+        </p>
         <div class="paper-container">
             <h3>Research Paper</h3>
             <div style="display: flex; justify-content: center;">
@@ -380,141 +455,100 @@
     </div>
 
     <div class="card">
-        <h2>Audio Processing Method Comparisons</h2>
+        <h2>Compare to Baseline (ASI)</h2>
         <p class="abstract">
-            The following audio samples demonstrate different audio processing methods and their effects on sound
-            quality.
-            We compare original audio signals with ASI-Certification processed versions and PsychoacousticsRobustness
-            enhanced versions
-            to showcase the different approaches to audio processing and enhancement.
+            The following audio samples demonstrate our method compared to the ASI-Certification baseline and original
+            audio.
+            PORSCHE shows superior performance in maintaining audio quality while providing
+            certified robustness against adversarial attacks. In our user study, we collected 2,500 responses,
+            with 2,420 responses (96.8%) indicating that adversarial samples targeting PORSCHE were more perceptually
+            noisy
+            than those targeting the baseline, highlighting our key advantage in offering certified robustness without
+            compromising perceptual imperceptibility.
         </p>
-    </div>
 
-    <!-- 音频攻击对比区域 1 -->
-    <div class="card">
-        <div class="content">
-            <h3 class="comparison-title">
-                <span class="underline">Audio Comparison Set 1</span>
-                <span class="comparison-subtitle">: Processing Method Comparison</span>
-            </h3>
-            <table class="table table-hover pt-2">
+        <!-- 统一的音频对比表格 -->
+        <div class="paper-container">
+            <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th style="text-align: center">Original Audio</th>
-                        <th style="text-align: center">ASI-Certification</th>
-                        <th style="text-align: center">PsychoacousticsRobustness</th>
+                        <th style="text-align: center; width: 20%;">Sample</th>
+                        <th style="text-align: center; width: 27%;">Original Audio</th>
+                        <th style="text-align: center; width: 27%;">ASI-Certification</th>
+                        <th style="text-align: center; width: 26%;">PORSCHE</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
-                            <audio controls="controls" style="width: 140px;">
+                        <td style="text-align: center; vertical-align: middle; font-weight: 600;">Sample 1</td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <audio controls="controls" style="width: 180px;">
                                 <source src="audio_samples/original/sample_01.wav" type="audio/wav">
-                                Your browser does not support the audio element.
                             </audio>
-                            <div style="font-size: 12px; margin-top: 5px; color: #666;">Sample 1</div>
                         </td>
-                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
-                            <audio controls="controls" style="width: 140px;">
+                        <td style="text-align: center; vertical-align: middle;">
+                            <audio controls="controls" style="width: 180px;">
                                 <source src="audio_samples/asi-certification/sample_01_asi.wav" type="audio/wav">
-                                Your browser does not support the audio element.
                             </audio>
-                            <div style="font-size: 12px; margin-top: 5px; color: #666;">ASI Certified</div>
                         </td>
-                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
-                            <audio controls="controls" style="width: 140px;">
+                        <td style="text-align: center; vertical-align: middle;">
+                            <audio controls="controls" style="width: 180px;">
                                 <source src="audio_samples/PsychoacousticsRobustness/sample_01_pr.wav" type="audio/wav">
-                                Your browser does not support the audio element.
                             </audio>
-                            <div style="font-size: 12px; margin-top: 5px; color: #666;">PR Enhanced</div>
                         </td>
                     </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- 音频攻击对比区域 2 -->
-    <div class="card">
-        <div class="content">
-            <h3 class="comparison-title">
-                <span class="underline">Audio Comparison Set 2</span>
-                <span class="comparison-subtitle">: Processing Method Comparison</span>
-            </h3>
-            <table class="table table-hover pt-2">
-                <thead>
                     <tr>
-                        <th style="text-align: center">Original Audio</th>
-                        <th style="text-align: center">ASI-Certification</th>
-                        <th style="text-align: center">PsychoacousticsRobustness</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
-                            <audio controls="controls" style="width: 140px;">
+                        <td style="text-align: center; vertical-align: middle; font-weight: 600;">Sample 2</td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <audio controls="controls" style="width: 180px;">
                                 <source src="audio_samples/original/sample_02.wav" type="audio/wav">
-                                Your browser does not support the audio element.
                             </audio>
-                            <div style="font-size: 12px; margin-top: 5px; color: #666;">Sample 2</div>
                         </td>
-                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
-                            <audio controls="controls" style="width: 140px;">
+                        <td style="text-align: center; vertical-align: middle;">
+                            <audio controls="controls" style="width: 180px;">
                                 <source src="audio_samples/asi-certification/sample_02_asi.wav" type="audio/wav">
-                                Your browser does not support the audio element.
                             </audio>
-                            <div style="font-size: 12px; margin-top: 5px; color: #666;">ASI Certified</div>
                         </td>
-                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
-                            <audio controls="controls" style="width: 140px;">
+                        <td style="text-align: center; vertical-align: middle;">
+                            <audio controls="controls" style="width: 180px;">
                                 <source src="audio_samples/PsychoacousticsRobustness/sample_02_pr.wav" type="audio/wav">
-                                Your browser does not support the audio element.
                             </audio>
-                            <div style="font-size: 12px; margin-top: 5px; color: #666;">PR Enhanced</div>
                         </td>
                     </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- 音频攻击对比区域 3 -->
-    <div class="card">
-        <div class="content">
-            <h3 class="comparison-title">
-                <span class="underline">Audio Comparison Set 3</span>
-                <span class="comparison-subtitle">: Processing Method Comparison</span>
-            </h3>
-            <table class="table table-hover pt-2">
-                <thead>
                     <tr>
-                        <th style="text-align: center">Original Audio</th>
-                        <th style="text-align: center">ASI-Certification</th>
-                        <th style="text-align: center">PsychoacousticsRobustness</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
-                            <audio controls="controls" style="width: 140px;">
+                        <td style="text-align: center; vertical-align: middle; font-weight: 600;">Sample 3</td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <audio controls="controls" style="width: 180px;">
                                 <source src="audio_samples/original/sample_03.wav" type="audio/wav">
-                                Your browser does not support the audio element.
                             </audio>
-                            <div style="font-size: 12px; margin-top: 5px; color: #666;">Sample 3</div>
                         </td>
-                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
-                            <audio controls="controls" style="width: 140px;">
+                        <td style="text-align: center; vertical-align: middle;">
+                            <audio controls="controls" style="width: 180px;">
                                 <source src="audio_samples/asi-certification/sample_03_asi.wav" type="audio/wav">
-                                Your browser does not support the audio element.
                             </audio>
-                            <div style="font-size: 12px; margin-top: 5px; color: #666;">ASI Certified</div>
                         </td>
-                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
-                            <audio controls="controls" style="width: 140px;">
+                        <td style="text-align: center; vertical-align: middle;">
+                            <audio controls="controls" style="width: 180px;">
                                 <source src="audio_samples/PsychoacousticsRobustness/sample_03_pr.wav" type="audio/wav">
-                                Your browser does not support the audio element.
                             </audio>
-                            <div style="font-size: 12px; margin-top: 5px; color: #666;">PR Enhanced</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle; font-weight: 600;">Sample 4</td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <audio controls="controls" style="width: 180px;">
+                                <source src="audio_samples/original/sample_04.wav" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <audio controls="controls" style="width: 180px;">
+                                <source src="audio_samples/asi-certification/sample_04_asi.wav" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <audio controls="controls" style="width: 180px;">
+                                <source src="audio_samples/PsychoacousticsRobustness/sample_04_pr.wav" type="audio/wav">
+                            </audio>
                         </td>
                     </tr>
                 </tbody>
@@ -522,48 +556,31 @@
         </div>
     </div>
 
-    <!-- 音频攻击对比区域 4 -->
+    <!-- User Study Section -->
     <div class="card">
-        <div class="content">
-            <h3 class="comparison-title">
-                <span class="underline">Audio Comparison Set 4</span>
-                <span class="comparison-subtitle">: Processing Method Comparison</span>
-            </h3>
-            <table class="table table-hover pt-2">
-                <thead>
-                    <tr>
-                        <th style="text-align: center">Original Audio</th>
-                        <th style="text-align: center">ASI-Certification</th>
-                        <th style="text-align: center">PsychoacousticsRobustness</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
-                            <audio controls="controls" style="width: 140px;">
-                                <source src="audio_samples/original/sample_04.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                            <div style="font-size: 12px; margin-top: 5px; color: #666;">Sample 4</div>
-                        </td>
-                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
-                            <audio controls="controls" style="width: 140px;">
-                                <source src="audio_samples/asi-certification/sample_04_asi.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                            <div style="font-size: 12px; margin-top: 5px; color: #666;">ASI Certified</div>
-                        </td>
-                        <td style="text-align: center; vertical-align: middle; width: 33.33%">
-                            <audio controls="controls" style="width: 140px;">
-                                <source src="audio_samples/PsychoacousticsRobustness/sample_04_pr.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                            <div style="font-size: 12px; margin-top: 5px; color: #666;">PR Enhanced</div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <h2>Noise Audibility</h2>
+        <p class="abstract">
+            We define noise audibility as a key metric for evaluating the perceptual impact of adversarial
+            perturbations.
+            Our audibility measure ensures that any defense mechanism considers human auditory perception limits.
+        </p>
+        <div class="paper-container">
+            <h3>Audibility Formula</h3>
+            <div
+                style="background: #f8f9fa; padding: 30px; border-radius: 12px; text-align: center; font-family: 'Times New Roman', serif; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="font-size: 24px; margin-bottom: 15px; font-weight: bold;">Equation 1: Audibility Definition
+                </div>
+                <div style="font-size: 22px; font-style: italic; line-height: 1.8;">
+                    𝒜(δ, x) = Σ<sub>m=0</sub><sup>N<sub>F</sub>-1</sup> 𝒜<sub>m</sub>(δ, x), 𝒜<sub>m</sub>(δ, x) =
+                    Σ<sub>k=0</sub><sup>⌊N/2⌋</sup> (p̄<sub>δ</sub>[m,k] / Ω<sub>x</sub>[m,k])
+                </div>
+            </div>
         </div>
+        <p class="abstract">
+            This audibility metric is evaluated through our comprehensive user study, which demonstrates the
+            effectiveness
+            of our approach in maintaining perceptual quality while providing certified robustness.
+        </p>
     </div>
 
     <!-- User Study Section -->
@@ -581,60 +598,14 @@
 
         <p class="abstract">
             Experience our user study firsthand! This interactive section allows you to participate in the same
-            training stage that our research participants completed. Test your ability to distinguish between
-            clean audio and adversarial examples with decreasing noise audibility levels.
+            training stage that our research participants completed. Listen to each pair and try to distinguish
+            between clean audio and adversarial examples with decreasing noise audibility levels. You can select
+            your response for each pair - this is purely for demonstration purposes.
         </p>
 
         <div class="user-study-form">
-            <!-- Stage 1: User Information -->
-            <div id="interactive-stage1" class="stage">
-                <h3>Participate in Our Study</h3>
-                <p>Fill in your information to start the interactive training session:</p>
-
-                <div class="form-group">
-                    <label for="interactive-workerId">Name/ID:</label>
-                    <input type="text" id="interactive-workerId" placeholder="Enter your name or ID" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Gender:</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="interactive-gender" value="male" required> Male</label>
-                        <label><input type="radio" name="interactive-gender" value="female" required> Female</label>
-                        <label><input type="radio" name="interactive-gender" value="other" required> Other</label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="interactive-age">Age:</label>
-                    <input type="number" id="interactive-age" min="1" max="120" placeholder="Enter your age" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="interactive-country">Country:</label>
-                    <select id="interactive-country" required>
-                        <option value="">Please choose...</option>
-                        <option value="US">United States</option>
-                        <option value="CN">China</option>
-                        <option value="UK">United Kingdom</option>
-                        <option value="CA">Canada</option>
-                        <option value="AU">Australia</option>
-                        <option value="DE">Germany</option>
-                        <option value="FR">France</option>
-                        <option value="JP">Japan</option>
-                        <option value="KR">South Korea</option>
-                        <option value="IN">India</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <button type="button" class="interactive-btn" onclick="startInteractiveTraining()">Start Interactive
-                    Training</button>
-            </div>
-
-            <!-- Stage 2: Interactive Training Questions -->
-            <div id="interactive-stage2" class="stage" style="display: none;">
-                <div class="stage-indicator">Interactive Training Stage</div>
+            <!-- Direct Interactive Training Questions -->
+            <div id="interactive-stage2" class="stage">
                 <div class="progress-bar">
                     <div class="progress-fill" id="interactiveProgress"></div>
                 </div>
@@ -647,338 +618,182 @@
                     Listen to each pair of audios and try to distinguish between the clean and adversarial versions.
                 </p>
 
-                <!-- Interactive Training Question 1 (Level 0 - Lowest Audibility) -->
-                <div class="card" style="background: #f8f9fa; border: 2px solid #007bff;">
-                    <div class="content">
-                        <h4 class="comparison-title">
-                            <span class="underline">Interactive Question 1</span>
-                            <span class="comparison-subtitle">: Lowest Audibility Level
-                                (2<sup>-5</sup>∼2<sup>-4</sup>)</span>
-                        </h4>
-                        <table class="table table-hover pt-2">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: center">Clean Audio</th>
-                                    <th style="text-align: center">Adversarial Audio</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="text-align: center; vertical-align: middle; width: 50%">
-                                        <audio controls="controls" style="width: 200px;">
-                                            <source src="audio/7729-102255-0014.flac" type="audio/flac">
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                        <div style="font-size: 12px; margin-top: 5px; color: #666;">Audio 1 (Clean)
-                                        </div>
-                                    </td>
-                                    <td style="text-align: center; vertical-align: middle; width: 50%">
-                                        <audio controls="controls" style="width: 200px;">
-                                            <source src="audio/wav_x_adv_i317_0.1160462703402808.wav" type="audio/wav">
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                        <div style="font-size: 12px; margin-top: 5px; color: #666;">Audio 2
-                                            (Adversarial)</div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div style="margin-top: 15px; text-align: center; color: #666; font-style: italic;">
-                            Question: Can you distinguish between the two audios?
-                        </div>
-                        <div class="radio-group" style="justify-content: center; margin-top: 15px;">
-                            <label><input type="radio" name="interactive-q1" value="1" required> I can distinguish
-                                between two audios</label>
-                            <label><input type="radio" name="interactive-q1" value="0" required> I cannot distinguish
-                                between two audios</label>
-                        </div>
-                    </div>
+                <!-- 统一的Interactive Training表格 -->
+                <div class="paper-container">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center; width: 12%;">Question</th>
+                                <th style="text-align: center; width: 18%;">Audibility Level</th>
+                                <th style="text-align: center; width: 22%;">Clean Audio</th>
+                                <th style="text-align: center; width: 22%;">Adversarial Audio</th>
+                                <th style="text-align: center; width: 26%;">Response</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: #f8f9fa;">
+                                <td style="text-align: center; vertical-align: middle; font-weight: 600;">Q1</td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    Highest<br />(2<sup>5</sup>∼2<sup>6</sup>)</td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <audio controls="controls" style="width: 180px;">
+                                        <source src="audio_samples/user_study/clean_01.flac" type="audio/flac">
+                                    </audio>
+                                </td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <audio controls="controls" style="width: 180px;">
+                                        <source src="audio_samples/user_study/adversarial_01.wav" type="audio/wav">
+                                    </audio>
+                                </td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <div
+                                        style="display: flex; flex-direction: row; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                                        <label
+                                            style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
+                                                type="radio" name="interactive-q1" value="1" required
+                                                style="margin-right: 5px;"> Can distinguish</label>
+                                        <label
+                                            style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
+                                                type="radio" name="interactive-q1" value="0" required
+                                                style="margin-right: 5px;"> Cannot distinguish</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center; vertical-align: middle; font-weight: 600;">Q2</td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    Level<br />(2<sup>1</sup>∼2<sup>2</sup>)</td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <audio controls="controls" style="width: 180px;">
+                                        <source src="audio_samples/user_study/clean_02.flac" type="audio/flac">
+                                    </audio>
+                                </td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <audio controls="controls" style="width: 180px;">
+                                        <source src="audio_samples/user_study/adversarial_02.wav" type="audio/wav">
+                                    </audio>
+                                </td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <div
+                                        style="display: flex; flex-direction: row; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                                        <label
+                                            style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
+                                                type="radio" name="interactive-q2" value="1" required
+                                                style="margin-right: 5px;"> Can distinguish</label>
+                                        <label
+                                            style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
+                                                type="radio" name="interactive-q2" value="0" required
+                                                style="margin-right: 5px;"> Cannot distinguish</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="background: #f8f9fa;">
+                                <td style="text-align: center; vertical-align: middle; font-weight: 600;">Q3</td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    Level<br />(2<sup>-2</sup>∼2<sup>-1</sup>)</td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <audio controls="controls" style="width: 180px;">
+                                        <source src="audio_samples/user_study/clean_03.flac" type="audio/flac">
+                                    </audio>
+                                </td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <audio controls="controls" style="width: 180px;">
+                                        <source src="audio_samples/user_study/adversarial_03.wav" type="audio/wav">
+                                    </audio>
+                                </td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <div
+                                        style="display: flex; flex-direction: row; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                                        <label
+                                            style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
+                                                type="radio" name="interactive-q3" value="1" required
+                                                style="margin-right: 5px;"> Can distinguish</label>
+                                        <label
+                                            style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
+                                                type="radio" name="interactive-q3" value="0" required
+                                                style="margin-right: 5px;"> Cannot distinguish</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center; vertical-align: middle; font-weight: 600;">Q4</td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    Level<br />(2<sup>-4</sup>∼2<sup>-3</sup>)</td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <audio controls="controls" style="width: 180px;">
+                                        <source src="audio_samples/user_study/clean_04.flac" type="audio/flac">
+                                    </audio>
+                                </td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <audio controls="controls" style="width: 180px;">
+                                        <source src="audio_samples/user_study/adversarial_04.wav" type="audio/wav">
+                                    </audio>
+                                </td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <div
+                                        style="display: flex; flex-direction: row; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                                        <label
+                                            style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
+                                                type="radio" name="interactive-q4" value="1" required
+                                                style="margin-right: 5px;"> Can distinguish</label>
+                                        <label
+                                            style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
+                                                type="radio" name="interactive-q4" value="0" required
+                                                style="margin-right: 5px;"> Cannot distinguish</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="background: #f8f9fa;">
+                                <td style="text-align: center; vertical-align: middle; font-weight: 600;">Q5</td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    Lowest<br />(2<sup>-5</sup>∼2<sup>-4</sup>)</td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <audio controls="controls" style="width: 180px;">
+                                        <source src="audio_samples/user_study/clean_05.flac" type="audio/flac">
+                                    </audio>
+                                </td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <audio controls="controls" style="width: 180px;">
+                                        <source src="audio_samples/user_study/adversarial_05.wav" type="audio/wav">
+                                    </audio>
+                                </td>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <div
+                                        style="display: flex; flex-direction: row; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                                        <label
+                                            style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
+                                                type="radio" name="interactive-q5" value="1" required
+                                                style="margin-right: 5px;"> Can distinguish</label>
+                                        <label
+                                            style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
+                                                type="radio" name="interactive-q5" value="0" required
+                                                style="margin-right: 5px;"> Cannot distinguish</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
-                <!-- Interactive Training Question 2 (Level 1) -->
-                <div class="card" style="background: #f8f9fa; border: 2px solid #007bff;">
-                    <div class="content">
-                        <h4 class="comparison-title">
-                            <span class="underline">Interactive Question 2</span>
-                            <span class="comparison-subtitle">: Level (2<sup>-4</sup>∼2<sup>-3</sup>)</span>
-                        </h4>
-                        <table class="table table-hover pt-2">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: center">Clean Audio</th>
-                                    <th style="text-align: center">Adversarial Audio</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="text-align: center; vertical-align: middle; width: 50%">
-                                        <audio controls="controls" style="width: 200px;">
-                                            <source src="audio/1221-135767-0022.flac" type="audio/flac">
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                        <div style="font-size: 12px; margin-top: 5px; color: #666;">Audio 1 (Clean)
-                                        </div>
-                                    </td>
-                                    <td style="text-align: center; vertical-align: middle; width: 50%">
-                                        <audio controls="controls" style="width: 200px;">
-                                            <source src="audio/wav_x_adv_i10_0.048694364387235546.wav" type="audio/wav">
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                        <div style="font-size: 12px; margin-top: 5px; color: #666;">Audio 2
-                                            (Adversarial)</div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div style="margin-top: 15px; text-align: center; color: #666; font-style: italic;">
-                            Question: Can you distinguish between the two audios?
-                        </div>
-                        <div class="radio-group" style="justify-content: center; margin-top: 15px;">
-                            <label><input type="radio" name="interactive-q2" value="1" required> I can distinguish
-                                between two audios</label>
-                            <label><input type="radio" name="interactive-q2" value="0" required> I cannot distinguish
-                                between two audios</label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Interactive Training Question 3 (Level 3) -->
-                <div class="card" style="background: #f8f9fa; border: 2px solid #007bff;">
-                    <div class="content">
-                        <h4 class="comparison-title">
-                            <span class="underline">Interactive Question 3</span>
-                            <span class="comparison-subtitle">: Level (2<sup>-2</sup>∼2<sup>-1</sup>)</span>
-                        </h4>
-                        <table class="table table-hover pt-2">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: center">Clean Audio</th>
-                                    <th style="text-align: center">Adversarial Audio</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="text-align: center; vertical-align: middle; width: 50%">
-                                        <audio controls="controls" style="width: 200px;">
-                                            <source src="audio/2830-3980-0007.flac" type="audio/flac">
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                        <div style="font-size: 12px; margin-top: 5px; color: #666;">Audio 1 (Clean)
-                                        </div>
-                                    </td>
-                                    <td style="text-align: center; vertical-align: middle; width: 50%">
-                                        <audio controls="controls" style="width: 200px;">
-                                            <source src="audio/wav_x_adv_i475_0.16384853068063344.wav" type="audio/wav">
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                        <div style="font-size: 12px; margin-top: 5px; color: #666;">Audio 2
-                                            (Adversarial)</div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div style="margin-top: 15px; text-align: center; color: #666; font-style: italic;">
-                            Question: Can you distinguish between the two audios?
-                        </div>
-                        <div class="radio-group" style="justify-content: center; margin-top: 15px;">
-                            <label><input type="radio" name="interactive-q3" value="1" required> I can distinguish
-                                between two audios</label>
-                            <label><input type="radio" name="interactive-q3" value="0" required> I cannot distinguish
-                                between two audios</label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Interactive Training Question 4 (Level 6) -->
-                <div class="card" style="background: #f8f9fa; border: 2px solid #007bff;">
-                    <div class="content">
-                        <h4 class="comparison-title">
-                            <span class="underline">Interactive Question 4</span>
-                            <span class="comparison-subtitle">: Level (2<sup>1</sup>∼2<sup>2</sup>)</span>
-                        </h4>
-                        <table class="table table-hover pt-2">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: center">Clean Audio</th>
-                                    <th style="text-align: center">Adversarial Audio</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="text-align: center; vertical-align: middle; width: 50%">
-                                        <audio controls="controls" style="width: 200px;">
-                                            <source src="audio/4446-2273-0023.flac" type="audio/flac">
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                        <div style="font-size: 12px; margin-top: 5px; color: #666;">Audio 1 (Clean)
-                                        </div>
-                                    </td>
-                                    <td style="text-align: center; vertical-align: middle; width: 50%">
-                                        <audio controls="controls" style="width: 200px;">
-                                            <source src="audio/wav_x_adv_i17_2.362097074313274.wav" type="audio/wav">
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                        <div style="font-size: 12px; margin-top: 5px; color: #666;">Audio 2
-                                            (Adversarial)</div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div style="margin-top: 15px; text-align: center; color: #666; font-style: italic;">
-                            Question: Can you distinguish between the two audios?
-                        </div>
-                        <div class="radio-group" style="justify-content: center; margin-top: 15px;">
-                            <label><input type="radio" name="interactive-q4" value="1" required> I can distinguish
-                                between two audios</label>
-                            <label><input type="radio" name="interactive-q4" value="0" required> I cannot distinguish
-                                between two audios</label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Interactive Training Question 5 (Level 10 - Highest Audibility) -->
-                <div class="card" style="background: #f8f9fa; border: 2px solid #007bff;">
-                    <div class="content">
-                        <h4 class="comparison-title">
-                            <span class="underline">Interactive Question 5</span>
-                            <span class="comparison-subtitle">: Highest Audibility Level
-                                (2<sup>5</sup>∼2<sup>6</sup>)</span>
-                        </h4>
-                        <table class="table table-hover pt-2">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: center">Clean Audio</th>
-                                    <th style="text-align: center">Adversarial Audio</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="text-align: center; vertical-align: middle; width: 50%">
-                                        <audio controls="controls" style="width: 200px;">
-                                            <source src="audio/8224-274381-0016.flac" type="audio/flac">
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                        <div style="font-size: 12px; margin-top: 5px; color: #666;">Audio 1 (Clean)
-                                        </div>
-                                    </td>
-                                    <td style="text-align: center; vertical-align: middle; width: 50%">
-                                        <audio controls="controls" style="width: 200px;">
-                                            <source src="audio/wav_x_adv_i452_0.2628752047136101.wav" type="audio/wav">
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                        <div style="font-size: 12px; margin-top: 5px; color: #666;">Audio 2
-                                            (Adversarial)</div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div style="margin-top: 15px; text-align: center; color: #666; font-style: italic;">
-                            Question: Can you distinguish between the two audios?
-                        </div>
-                        <div class="radio-group" style="justify-content: center; margin-top: 15px;">
-                            <label><input type="radio" name="interactive-q5" value="1" required> I can distinguish
-                                between two audios</label>
-                            <label><input type="radio" name="interactive-q5" value="0" required> I cannot distinguish
-                                between two audios</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </td>
-            <td style="text-align: center; vertical-align: middle; width: 50%">
-                <audio controls="controls" style="width: 200px;">
-                    <source src="audio/wav_x_adv_i317_0.1160462703402808.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-                <div style="font-size: 12px; margin-top: 5px; color: #666;">Audio 2
-                    (Adversarial)</div>
-            </td>
-            </tr>
-            </tbody>
-            </table>
-            <div style="margin-top: 15px; text-align: center; color: #666; font-style: italic;">
-                Question: Can you distinguish between the two audios?
-            </div>
-            <div class="radio-group" style="justify-content: center; margin-top: 15px;">
-                <label><input type="radio" name="interactive-q5" value="1" required> I can distinguish
-                    between two audios</label>
-                <label><input type="radio" name="interactive-q5" value="0" required> I cannot distinguish
-                    between two audios</label>
             </div>
         </div>
-    </div>
-
-    <button type="button" class="interactive-btn" onclick="completeInteractiveTraining()">Complete
-        Interactive Training</button>
-    </div>
-
-    <!-- Stage 3: Results -->
-    <div id="interactive-stage3" class="stage" style="display: none;">
-        <h3>Interactive Training Complete!</h3>
-        <div class="alert" id="interactiveSuccessAlert">
-            <strong>Congratulations!</strong> You have completed the interactive training session. Your
-            responses have been recorded.
-        </div>
-        <div id="interactiveResults">
-            <h4>Your Training Results:</h4>
-            <div id="interactiveResultsSummary"></div>
-        </div>
-        <p style="text-align: center; color: #666; font-style: italic;">
-            Thank you for experiencing our user study methodology firsthand! This demonstrates the same
-            training process that our research participants completed.
-        </p>
-        <button type="button" class="interactive-btn" onclick="resetInteractiveStudy()">Try Again</button>
-    </div>
-    </div>
     </div>
 
     <!-- 页脚 -->
     <footer
         style="background-color: #f8f9fa; width: 100%; margin-top: 32px; padding: 16px; text-align: center; border-top: 1px solid #dee2e6;">
-        <p style="color: #666; margin: 0;">PsychoacousticsRobustness Project © 2025</p>
+        <p style="color: #666; margin: 0;">PORSCHE: Psychoacoustic-Oriented Random Smoothing for Certified
+            Human-Imperceptible Defense</p>
     </footer>
 
     <script>
-        let interactiveCurrentStage = 1;
-        let interactiveStartTime = new Date();
-        let interactiveUserData = {};
+        // 简化的交互功能 - 仅用于展示
+        document.addEventListener('DOMContentLoaded', function () {
+            // 页面加载完成，无需特殊初始化
+        });
 
-        function startInteractiveTraining() {
-            // Validate user information
-            const workerId = document.getElementById('interactive-workerId').value.trim();
-            const gender = document.querySelector('input[name="interactive-gender"]:checked');
-            const age = document.getElementById('interactive-age').value;
-            const country = document.getElementById('interactive-country').value;
-
-            if (!workerId || !gender || !age || !country) {
-                alert('Please fill in all required information.');
-                return;
-            }
-
-            interactiveUserData = {
-                workerId: workerId,
-                gender: gender.value,
-                age: age,
-                country: country,
-                startTime: interactiveStartTime
-            };
-
-            // Move to training stage
-            document.getElementById('interactive-stage1').style.display = 'none';
-            document.getElementById('interactive-stage2').style.display = 'block';
-            interactiveCurrentStage = 2;
-            updateInteractiveProgress();
-
-            // Smooth scroll to training section
-            document.getElementById('interactive-stage2').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-
+        // 进度条更新（可选功能）
         function updateInteractiveProgress() {
-            if (interactiveCurrentStage !== 2) return;
-
             const questions = ['interactive-q1', 'interactive-q2', 'interactive-q3', 'interactive-q4', 'interactive-q5'];
             let answered = 0;
 
@@ -992,125 +807,10 @@
             document.getElementById('interactiveProgress').style.width = progress + '%';
         }
 
-        function completeInteractiveTraining() {
-            // Check if all questions are answered
-            const questions = ['interactive-q1', 'interactive-q2', 'interactive-q3', 'interactive-q4', 'interactive-q5'];
-            let allAnswered = true;
-            let results = {};
-
-            questions.forEach(q => {
-                const answer = document.querySelector(`input[name="${q}"]:checked`);
-                if (!answer) {
-                    allAnswered = false;
-                } else {
-                    results[q] = answer.value;
-                }
-            });
-
-            if (!allAnswered) {
-                alert('Please answer all training questions before proceeding.');
-                return;
-            }
-
-            // Calculate results
-            const endTime = new Date();
-            const duration = (endTime - interactiveStartTime) / 1000; // seconds
-
-            interactiveUserData.trainingResults = results;
-            interactiveUserData.endTime = endTime;
-            interactiveUserData.duration = duration;
-
-            // Display results
-            displayInteractiveResults(results);
-
-            // Move to completion stage
-            document.getElementById('interactive-stage2').style.display = 'none';
-            document.getElementById('interactive-stage3').style.display = 'block';
-            document.getElementById('interactiveSuccessAlert').style.display = 'block';
-            interactiveCurrentStage = 3;
-
-            // Smooth scroll to results section
-            document.getElementById('interactive-stage3').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-
-        function displayInteractiveResults(results) {
-            const resultsSummary = document.getElementById('interactiveResultsSummary');
-            const questions = [
-                'Question 1 (Lowest Audibility - Level 0)',
-                'Question 2 (Level 1)',
-                'Question 3 (Level 3)',
-                'Question 4 (Level 6)',
-                'Question 5 (Highest Audibility - Level 10)'
-            ];
-
-            let html = '<table class="table" style="margin-top: 20px;"><thead><tr><th style="text-align: center;">Question</th><th style="text-align: center;">Your Response</th></tr></thead><tbody>';
-
-            let canDistinguishCount = 0;
-            Object.keys(results).forEach((key, index) => {
-                const response = results[key] === '1' ? 'Can distinguish' : 'Cannot distinguish';
-                if (results[key] === '1') canDistinguishCount++;
-                const responseClass = results[key] === '1' ? 'style="color: #28a745; font-weight: 600;"' : 'style="color: #dc3545; font-weight: 600;"';
-                html += `<tr><td>${questions[index]}</td><td ${responseClass}>${response}</td></tr>`;
-            });
-
-            html += '</tbody></table>';
-
-            // Add summary statistics
-            html += `<div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 5px;">`;
-            html += `<p><strong>Summary:</strong></p>`;
-            html += `<p>• You could distinguish <strong>${canDistinguishCount} out of 5</strong> audio pairs</p>`;
-            html += `<p>• Completion time: <strong>${interactiveUserData.duration.toFixed(1)} seconds</strong></p>`;
-            html += `<p>• Accuracy rate: <strong>${(canDistinguishCount / 5 * 100).toFixed(1)}%</strong></p>`;
-            html += `</div>`;
-
-            resultsSummary.innerHTML = html;
-
-            // Log results to console for research purposes
-            console.log('Interactive User Study Results:', interactiveUserData);
-        }
-
-        function resetInteractiveStudy() {
-            // Reset all form data
-            document.getElementById('interactive-workerId').value = '';
-            document.querySelector('input[name="interactive-gender"]:checked')?.click();
-            document.getElementById('interactive-age').value = '';
-            document.getElementById('interactive-country').selectedIndex = 0;
-
-            // Reset all radio buttons
-            const radioButtons = document.querySelectorAll('input[name^="interactive-q"]');
-            radioButtons.forEach(radio => radio.checked = false);
-
-            // Reset progress
-            document.getElementById('interactiveProgress').style.width = '0%';
-
-            // Reset stages
-            document.getElementById('interactive-stage3').style.display = 'none';
-            document.getElementById('interactive-stage1').style.display = 'block';
-            interactiveCurrentStage = 1;
-            interactiveStartTime = new Date();
-
-            // Scroll back to start
-            document.getElementById('interactive-stage1').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-
-        // Add event listeners for progress tracking
+        // 添加进度跟踪事件监听器
         document.addEventListener('change', function (e) {
             if (e.target.type === 'radio' && e.target.name.startsWith('interactive-q')) {
                 updateInteractiveProgress();
-            }
-        });
-
-        // Prevent accidental navigation away during study
-        window.addEventListener('beforeunload', function (e) {
-            if (interactiveCurrentStage === 2) {
-                e.preventDefault();
-                e.returnValue = 'You have an interactive training session in progress. Are you sure you want to leave?';
             }
         });
     </script>
