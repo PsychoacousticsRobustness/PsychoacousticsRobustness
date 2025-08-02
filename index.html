@@ -75,7 +75,7 @@
         }
 
         .paper-container h3 {
-            color: #333;
+            color: #6c757d;
             font-size: 2.2rem;
             margin-bottom: 10px;
             font-weight: 600;
@@ -116,8 +116,8 @@
         }
 
         table.table th {
-            background: #f8f9fa;
-            color: #333;
+            background: linear-gradient(135deg, #81ecec, #00cec9);
+            color: #2d3436;
             padding: 12px 8px;
             border: 1px solid #ddd;
             font-weight: 600;
@@ -150,11 +150,15 @@
             text-align: center;
         }
 
+        h3 {
+            color: #28a745;
+        }
+
         h2 {
-            font-size: 2.6rem;
-            margin-bottom: 12px;
-            border-bottom: 2px solid #666;
-            padding-bottom: 8px;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            padding-bottom: 0px;
+            color: #007bff;
         }
 
         /* Interactive Training表格样式 */
@@ -180,7 +184,7 @@
             }
 
             h2 {
-                font-size: 2.2rem;
+                font-size: 2.4rem;
             }
         }
 
@@ -276,18 +280,18 @@
         }
 
         .progress-bar {
-            width: 100%;
-            height: 6px;
+            width: 60%;
+            height: 4px;
             background: #e9ecef;
-            border-radius: 3px;
-            margin: 5px 0;
+            border-radius: 2px;
+            margin: 5px auto;
             overflow: hidden;
         }
 
         .progress-fill {
             height: 100%;
             background: linear-gradient(90deg, #007bff, #0056b3);
-            border-radius: 3px;
+            border-radius: 2px;
             width: 0%;
             transition: width 0.5s ease;
         }
@@ -358,20 +362,6 @@
                 Adversarial Examples</span>
         </h1>
 
-        <table class="authors">
-            <tbody>
-                <tr>
-                    <td style="text-align: center;">
-                        <h3>
-                            <span class="author-block">
-                                <a href="#" style="color: #0b0b0b">Research Project, 2025</a>
-                            </span>
-                        </h3>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
         <div>
             <h2>Abstract</h2>
         </div>
@@ -393,13 +383,13 @@
             https://psychoacousticsrobustness.github.io/PsychoacousticsRobustness/
         </p>
 
-        <!-- 研究论文图片显示 -->
-        <div class="paper-container">
-            <h3>Research Paper</h3>
+        <!-- 研究论文图片显示 - 暂时空出来 -->
+        <!-- <div class="paper-container">
+            <h3 style="color: #6c5ce7;">Research Paper</h3>
             <div style="display: flex; justify-content: center;">
                 <img src="images/research_paper_page_1.png" alt="Research Paper">
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- Our Pipeline Section -->
@@ -419,7 +409,6 @@
             model to generate multiple classification results. A final label and a certified radius can be calculated
             from the results.
         </p>
-        <h3 style="margin: 15px 0 10px 0;">Pipeline Overview</h3>
         <div style="text-align: center;">
             <img src="images/workflow_0730-1.png" alt="PORSCHE Pipeline Workflow"
                 style="width: 95%; max-width: 900px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
@@ -444,12 +433,9 @@
             68.7% (σ=20), 69.3% (σ=30), 61.6% (σ=40), and 59.5% (σ=50).
         </p>
         <div class="paper-container">
-            <h3>Experimental Results Chart</h3>
+            <h3 style="color: #6c5ce7;">Research Paper</h3>
             <div style="display: flex; justify-content: center;">
-                <div
-                    style="padding: 60px; background: #f8f9fa; border: 2px dashed #dee2e6; font-style: italic; color: #666; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                    PORSCHE vs Undefended Model Results Chart
-                </div>
+                <img src="images/research_paper_page_1.png" alt="Research Paper">
             </div>
         </div>
     </div>
@@ -560,17 +546,14 @@
     <div class="card">
         <h2>Noise Audibility</h2>
         <p class="abstract">
-            We define noise audibility as a key metric for evaluating the perceptual impact of adversarial
+            We define noise audibility $\mathcal{A}$ as a key metric for evaluating the perceptual impact of adversarial
             perturbations.
             Our audibility measure ensures that any defense mechanism considers human auditory perception limits.
         </p>
         <div class="paper-container">
-            <h3>Audibility Formula</h3>
             <div
-                style="background: #f8f9fa; padding: 20px; border-radius: 12px; text-align: center; font-family: 'Times New Roman', serif; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                <div style="font-size: 24px; margin-bottom: 10px; font-weight: bold;">Equation 1: Audibility Definition
-                </div>
-                <div style="font-size: 22px; font-style: italic; line-height: 1.6;">
+                style="background: linear-gradient(135deg, #74b9ff, #0984e3); padding: 12px 20px; border-radius: 8px; text-align: center; font-family: 'Times New Roman', serif; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: inline-block; margin: 0 auto;">
+                <div style="font-size: 20px; font-style: italic; line-height: 1.5; color: white;">
                     𝒜(δ, x) = Σ<sub>m=0</sub><sup>N<sub>F</sub>-1</sup> 𝒜<sub>m</sub>(δ, x), 𝒜<sub>m</sub>(δ, x) =
                     Σ<sub>k=0</sub><sup>⌊N/2⌋</sup> (p̄<sub>δ</sub>[m,k] / Ω<sub>x</sub>[m,k])
                 </div>
@@ -606,13 +589,16 @@
         <div class="user-study-form">
             <!-- Direct Interactive Training Questions -->
             <div id="interactive-stage2" class="stage">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="interactiveProgress"></div>
+                <!-- 分割线 -->
+                <div
+                    style="width: 100%; height: 2px; background: linear-gradient(90deg, #007bff, #0056b3); margin: 20px 0; border-radius: 1px;">
                 </div>
 
-                <h3>Interactive Training</h3>
+                <div style="text-align: center;">
+                    <h3 style="color: #a29bfe; font-size: 2.0rem; margin-bottom: 20px;">Training Stage</h3>
+                </div>
                 <p
-                    style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 5px; color: #856404;">
+                    style="background: linear-gradient(135deg, #ffeaa7, #fdcb6e); border: 1px solid #e17055; padding: 15px; border-radius: 5px; color: #2d3436;">
                     <strong>Instructions:</strong> Please use <strong>headphones</strong> and ensure you're in a
                     <strong>quiet environment</strong>.
                     Listen to each pair of audios and try to distinguish between the clean and adversarial versions.
@@ -651,11 +637,11 @@
                                         <label
                                             style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
                                                 type="radio" name="interactive-q1" value="1" required
-                                                style="margin-right: 5px;"> Can distinguish</label>
+                                                style="margin-right: 5px;"> I can distinguish</label>
                                         <label
                                             style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
                                                 type="radio" name="interactive-q1" value="0" required
-                                                style="margin-right: 5px;"> Cannot distinguish</label>
+                                                style="margin-right: 5px;"> I cannot distinguish</label>
                                     </div>
                                 </td>
                             </tr>
@@ -679,11 +665,11 @@
                                         <label
                                             style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
                                                 type="radio" name="interactive-q2" value="1" required
-                                                style="margin-right: 5px;"> Can distinguish</label>
+                                                style="margin-right: 5px;"> I can distinguish</label>
                                         <label
                                             style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
                                                 type="radio" name="interactive-q2" value="0" required
-                                                style="margin-right: 5px;"> Cannot distinguish</label>
+                                                style="margin-right: 5px;"> I cannot distinguish</label>
                                     </div>
                                 </td>
                             </tr>
@@ -707,11 +693,11 @@
                                         <label
                                             style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
                                                 type="radio" name="interactive-q3" value="1" required
-                                                style="margin-right: 5px;"> Can distinguish</label>
+                                                style="margin-right: 5px;"> I can distinguish</label>
                                         <label
                                             style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
                                                 type="radio" name="interactive-q3" value="0" required
-                                                style="margin-right: 5px;"> Cannot distinguish</label>
+                                                style="margin-right: 5px;"> I cannot distinguish</label>
                                     </div>
                                 </td>
                             </tr>
@@ -735,11 +721,11 @@
                                         <label
                                             style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
                                                 type="radio" name="interactive-q4" value="1" required
-                                                style="margin-right: 5px;"> Can distinguish</label>
+                                                style="margin-right: 5px;"> I can distinguish</label>
                                         <label
                                             style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
                                                 type="radio" name="interactive-q4" value="0" required
-                                                style="margin-right: 5px;"> Cannot distinguish</label>
+                                                style="margin-right: 5px;"> I cannot distinguish</label>
                                     </div>
                                 </td>
                             </tr>
@@ -763,11 +749,11 @@
                                         <label
                                             style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
                                                 type="radio" name="interactive-q5" value="1" required
-                                                style="margin-right: 5px;"> Can distinguish</label>
+                                                style="margin-right: 5px;"> I can distinguish</label>
                                         <label
                                             style="font-size: 17px; font-weight: 500; display: flex; align-items: center; white-space: nowrap;"><input
                                                 type="radio" name="interactive-q5" value="0" required
-                                                style="margin-right: 5px;"> Cannot distinguish</label>
+                                                style="margin-right: 5px;"> I cannot distinguish</label>
                                     </div>
                                 </td>
                             </tr>
@@ -792,27 +778,7 @@
             // 页面加载完成，无需特殊初始化
         });
 
-        // 进度条更新（可选功能）
-        function updateInteractiveProgress() {
-            const questions = ['interactive-q1', 'interactive-q2', 'interactive-q3', 'interactive-q4', 'interactive-q5'];
-            let answered = 0;
-
-            questions.forEach(q => {
-                if (document.querySelector(`input[name="${q}"]:checked`)) {
-                    answered++;
-                }
-            });
-
-            const progress = (answered / questions.length) * 100;
-            document.getElementById('interactiveProgress').style.width = progress + '%';
-        }
-
-        // 添加进度跟踪事件监听器
-        document.addEventListener('change', function (e) {
-            if (e.target.type === 'radio' && e.target.name.startsWith('interactive-q')) {
-                updateInteractiveProgress();
-            }
-        });
+        // 删除进度条相关功能，已不再需要
     </script>
 
 </body>
