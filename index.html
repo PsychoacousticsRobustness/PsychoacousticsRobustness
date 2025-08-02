@@ -25,15 +25,15 @@
         body {
             background: #ffffff;
             font-family: 'Google Sans', sans-serif;
-            font-size: 20px;
-            line-height: 1.6;
+            font-size: 18px;
+            line-height: 1.4;
             color: #333;
         }
 
         /* 主标题样式 */
         .header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
+            font-size: 3.2rem;
+            margin-bottom: 10px;
             font-weight: 700;
             text-align: center;
         }
@@ -41,8 +41,8 @@
         /* 简洁容器样式 */
         .card {
             background: #ffffff;
-            padding: 40px 20px;
-            margin: 30px auto;
+            padding: 20px 20px;
+            margin: 15px auto;
             max-width: 1200px;
             text-align: center;
         }
@@ -53,31 +53,31 @@
             margin: 2px auto;
         }
 
-        /* Abstract 部分样式 - 增大字体，内容左对齐 */
+        /* Abstract 部分样式 - 缩小字体，减少行间距 */
         .abstract {
-            font-size: 22px;
-            line-height: 1.7;
+            font-size: 18px;
+            line-height: 1.4;
             color: #333;
             text-align: justify;
-            margin: 10px 0;
+            margin: 8px 0;
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        /* 研究论文图片容器 */
+        /* 研究论文图片容器 - 减少上下留白 */
         .paper-container {
             background: transparent;
-            padding: 30px 0;
-            margin: 30px auto;
+            padding: 8px 0;
+            margin: 10px auto;
             text-align: center;
             max-width: 1200px;
         }
 
         .paper-container h3 {
             color: #333;
-            font-size: 1.9rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
             font-weight: 600;
         }
 
@@ -105,7 +105,7 @@
 
         /* 简洁表格样式 */
         table.table {
-            margin: 30px auto;
+            margin: 15px auto;
             border-collapse: collapse;
             background: white;
             border: 1px solid #ddd;
@@ -118,14 +118,14 @@
         table.table th {
             background: #f8f9fa;
             color: #333;
-            padding: 15px 10px;
+            padding: 12px 8px;
             border: 1px solid #ddd;
             font-weight: 600;
             font-size: 17px;
         }
 
         table.table td {
-            padding: 18px 10px;
+            padding: 12px 8px;
             border: 1px solid #ddd;
             background: #ffffff;
         }
@@ -141,7 +141,7 @@
             height: 30px;
         }
 
-        /* 标题样式统一 */
+        /* 标题样式统一 - 放大标题 */
         h1,
         h2,
         h3 {
@@ -151,10 +151,10 @@
         }
 
         h2 {
-            font-size: 2.3rem;
-            margin-bottom: 20px;
+            font-size: 2.6rem;
+            margin-bottom: 12px;
             border-bottom: 2px solid #666;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
         }
 
         /* Interactive Training表格样式 */
@@ -168,15 +168,19 @@
         /* 响应式设计 */
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 2rem;
+                font-size: 2.4rem;
             }
 
             .abstract {
-                font-size: 17px;
+                font-size: 16px;
             }
 
             .comparison-title {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
             }
         }
 
@@ -196,11 +200,11 @@
         .user-study-form {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 10px;
+            padding: 5px;
         }
 
         .form-group {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .form-group label {
@@ -276,7 +280,7 @@
             height: 6px;
             background: #e9ecef;
             border-radius: 3px;
-            margin: 8px 0;
+            margin: 5px 0;
             overflow: hidden;
         }
 
@@ -306,12 +310,12 @@
 
         .stage-indicator {
             text-align: center;
-            margin: 8px 0;
+            margin: 5px 0;
             font-size: 1rem;
             font-weight: 600;
             color: #007bff;
             background: #e7f3ff;
-            padding: 6px;
+            padding: 4px;
             border-radius: 5px;
         }
 
@@ -348,10 +352,10 @@
 <body>
     <div class="header card" id="top">
         <h1>
-            <span style="font-weight: bolder; color: #c03d3e;">Psychoacoustics</span>
-            <span style="font-weight: bolder; color: #666;">Robustness</span>
+            <span style="font-weight: bolder; color: #c03d3e;">PORSCHE</span>
             <span style="font-weight: bolder; color: #0b0b0b;">:</span>
-            <span style="font-weight: normal; color: #0b0b0b;">Exploring Audio Processing Robustness</span>
+            <span style="font-weight: normal; color: #0b0b0b;">Psychoacoustics-Oriented Provable Robustness To Audio
+                Adversarial Examples</span>
         </h1>
 
         <table class="authors">
@@ -367,8 +371,6 @@
                 </tr>
             </tbody>
         </table>
-
-        <br>
 
         <div>
             <h2>Abstract</h2>
@@ -393,12 +395,9 @@
 
         <!-- 研究论文图片显示 -->
         <div class="paper-container">
-            <h3>Experimental Results</h3>
+            <h3>Research Paper</h3>
             <div style="display: flex; justify-content: center;">
-                <div
-                    style="padding: 60px; background: #f8f9fa; border: 2px dashed #dee2e6; font-style: italic; color: #666; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                    PORSCHE vs Undefended Model Results Chart
-                </div>
+                <img src="images/research_paper_page_1.png" alt="Research Paper">
             </div>
         </div>
     </div>
@@ -420,12 +419,10 @@
             model to generate multiple classification results. A final label and a certified radius can be calculated
             from the results.
         </p>
-        <div class="paper-container">
-            <h3>Pipeline Overview</h3>
-            <div style="display: flex; justify-content: center;">
-                <img src="images/workflow_0730-1.png" alt="PORSCHE Pipeline Workflow"
-                    style="width: 95%; max-width: 900px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-            </div>
+        <h3 style="margin: 15px 0 10px 0;">Pipeline Overview</h3>
+        <div style="text-align: center;">
+            <img src="images/workflow_0730-1.png" alt="PORSCHE Pipeline Workflow"
+                style="width: 95%; max-width: 900px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
         </div>
     </div>
 
@@ -447,9 +444,12 @@
             68.7% (σ=20), 69.3% (σ=30), 61.6% (σ=40), and 59.5% (σ=50).
         </p>
         <div class="paper-container">
-            <h3>Research Paper</h3>
+            <h3>Experimental Results Chart</h3>
             <div style="display: flex; justify-content: center;">
-                <img src="images/research_paper_page_1.png" alt="Research Paper">
+                <div
+                    style="padding: 60px; background: #f8f9fa; border: 2px dashed #dee2e6; font-style: italic; color: #666; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    PORSCHE vs Undefended Model Results Chart
+                </div>
             </div>
         </div>
     </div>
@@ -567,10 +567,10 @@
         <div class="paper-container">
             <h3>Audibility Formula</h3>
             <div
-                style="background: #f8f9fa; padding: 30px; border-radius: 12px; text-align: center; font-family: 'Times New Roman', serif; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                <div style="font-size: 24px; margin-bottom: 15px; font-weight: bold;">Equation 1: Audibility Definition
+                style="background: #f8f9fa; padding: 20px; border-radius: 12px; text-align: center; font-family: 'Times New Roman', serif; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="font-size: 24px; margin-bottom: 10px; font-weight: bold;">Equation 1: Audibility Definition
                 </div>
-                <div style="font-size: 22px; font-style: italic; line-height: 1.8;">
+                <div style="font-size: 22px; font-style: italic; line-height: 1.6;">
                     𝒜(δ, x) = Σ<sub>m=0</sub><sup>N<sub>F</sub>-1</sup> 𝒜<sub>m</sub>(δ, x), 𝒜<sub>m</sub>(δ, x) =
                     Σ<sub>k=0</sub><sup>⌊N/2⌋</sup> (p̄<sub>δ</sub>[m,k] / Ω<sub>x</sub>[m,k])
                 </div>
