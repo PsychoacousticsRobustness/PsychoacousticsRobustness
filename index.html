@@ -367,19 +367,21 @@
         </div>
 
         <p class="abstract">
-            Intelligent audio systems have been widely applied in various scenarios. However, their core component, the
-            speech understanding algorithm, can be misled by carefully constructed adversarial examples, which are
-            imperceptible to humans but can cause the system to make incorrect or even harmful decisions. Certified
-            defense aims to provide a lower bound on accuracy for deep learning algorithms under a certain perturbation
-            constraint. Nevertheless, existing work primarily focuses on bounding adversarial perturbations under ℓp
-            norm, which fail to accurately reflect human auditory perception. This mismatch allows adversaries to craft
-            imperceptible perturbations that bypass both human detection and norm-based defenses. We propose PORSCHE, a
-            novel certified defense framework for audio understanding algorithms, based on psychoacoustically guided
-            randomized smoothing. We present rigorous theoretical analysis and extensive experiments showing that
-            PORSCHE provides certified lower bounds on model accuracy under human perceptual constraints. In the
-            presence of imperceptible adversarial perturbations, PORSCHE raises the certified accuracy from 3.2% to at
-            least 69.3%. This paper bridges the gap between certified defense and human auditory perception,
-            establishing the relationship between model robustness and noise audibility. Our demo is available at
+            Intelligent audio systems have been widely applied in various scenarios. However, their core component,
+            audio understanding algorithms, remains vulnerable to carefully designed, imperceptible perturbations
+            (e.g., adversarial examples) that can cause misclassification or erroneous decisions.
+            Certified defenses aim to provide a lower bound on the accuracy of deep learning algorithms under a
+            specific perturbation constraint. Nevertheless, existing work primarily focuses on bounding adversarial
+            perturbations under ℓ<sub>p</sub> norms, failing to reflect human auditory perception accurately.
+            This mismatch allows adversaries to craft imperceptible perturbations that bypass both human detection
+            and norm-based defenses. In this paper, we propose a novel certified defense framework PORSCHE
+            (psychoacoustics-oriented randomized smoothing scheme) for audio understanding algorithms. We present
+            rigorous theoretical analysis and extensive experiments to show that PORSCHE provides a certified lower
+            bound on the accuracy of audio understanding algorithms under a psychoacoustics-oriented noise audibility
+            constraint. We conduct experiments to demonstrate that within the limits of human auditory perception,
+            the model's accuracy under adversarial attacks improves from 3.2% to at least 69.3%. This paper bridges
+            the gap between certified defenses and human auditory perception, establishing the relationship between
+            model robustness and noise audibility. Our demo is available at
             https://psychoacousticsrobustness.github.io/PsychoacousticsRobustness/
         </p>
 
@@ -396,9 +398,9 @@
     <div class="card">
         <h2>Our Pipeline</h2>
         <p class="abstract">
-            PORSCHE (psychoacoustic-oriented random smoothing framework) provides a novel approach to defending against
-            adversarial attacks in speech understanding systems. The pipeline incorporates perceptual constraints to
-            ensure robustness while maintaining audio quality within human auditory perception limits.
+            PORSCHE (psychoacoustics-oriented randomized smoothing framework) provides a certified lower bound on the
+            accuracy of audio
+            understanding algorithms under a psychoacoustics-oriented noise audibility constraint.
         </p>
         <p class="abstract">
             The workflow of PORSCHE: PORSCHE turns an audio understanding model into a spectral-smoothed one such that
